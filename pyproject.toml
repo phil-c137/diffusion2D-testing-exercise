@@ -1,0 +1,27 @@
+[project]
+authors = [{name = "Philipp Hofmann", email = "philipp.hofmann@iws.uni-stuttgart.de"}]
+dependencies = []
+name = "diffusion2D-testing-exercise"
+requires-python = ">= 3.11"
+version = "0.1.0"
+
+[build-system]
+build-backend = "hatchling.build"
+requires = ["hatchling"]
+
+[tool.pixi.workspace]
+channels = ["conda-forge"]
+platforms = ["osx-arm64"]
+
+[tool.pixi.pypi-dependencies]
+diffusion2d_testing_exercise = { path = ".", editable = true }
+
+[tool.pixi.tasks]
+diffusion2d = "python diffusion2d.py"
+
+[tool.pixi.dependencies]
+numpy = ">=2.4.3,<3"
+matplotlib = ">=3.10.8,<4"
+pytest = ">=9.0.2,<10"
+coverage = ">=7.13.5,<8"
+tox = ">=4.50.3,<5"
