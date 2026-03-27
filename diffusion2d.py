@@ -50,7 +50,7 @@ class SolveDiffusion2D:
         self.nx = int(w / dx)
         self.ny = int(h / dy)
 
-    def initialize_physical_parameters(self, d=4., T_cold=300, T_hot=700):
+    def initialize_physical_parameters(self, d=4., T_cold=300.0, T_hot=700.0):
         # Assert all inputs are floats
         assert isinstance(d, float)
         assert isinstance(T_cold, float)
