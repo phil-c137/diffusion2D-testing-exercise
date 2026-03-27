@@ -52,6 +52,7 @@ class SolveDiffusion2D:
 
     def initialize_physical_parameters(self, d=4., T_cold=300.0, T_hot=700.0):
         # Assert all inputs are floats
+        # Another comment
         assert isinstance(d, float)
         assert isinstance(T_cold, float)
         assert isinstance(T_hot, float)
